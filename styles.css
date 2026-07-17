@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: 'Times New Roman', Georgia, serif;
+  background: #F4FF02;
+  color: #111;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.page {
+  width: 100%;
+  max-width: 1200px;
+  min-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.logo-figure{width:212px;height:468px}
+.logo-figure svg{width:100%;height:100%;display:block}
+.phone{font-size:20px;padding:40px 0 60px;display:block;text-align:center}
+
+.logo-letter {
+  display: block;
+  font-size: clamp(4rem, 18vw, 10rem);
+  line-height: 0.78;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.page-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: clamp(0.96rem, 1vw, 1.05rem);
+  padding: 16px 0 8px;
+}
+
+.page-footer span {
+  flex: 1 1 0;
+  text-align: center;
+}
+
+.page-footer span:first-child {
+  text-align: left;
+}
+
+.page-footer span:last-child {
+  text-align: right;
+}
+
+@media (max-width: 900px) {
+  .page {
+    min-height: auto;
+    padding: 0 16px;
+  }
+
+  .logo-letter {
+    font-size: clamp(3.5rem, 18vw, 8rem);
+  }
+}
+
+@media (max-width: 420px){
+  .logo-figure{width:160px;height:354px}
+  .phone{font-size:18px;padding:24px 0 40px}
+}
+
+@media (max-width: 720px) {
+  body {
+    padding: 16px;
+  }
+
+  .page {
+    min-height: auto;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 12px 0 0;
+  }
+
+  .page-footer span {
+    text-align: center;
+  }
+
+  .page-footer span:first-child,
+  .page-footer span:last-child {
+    text-align: center;
+  }
+}
