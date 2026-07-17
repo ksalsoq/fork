@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORK Production</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #F4FF02; /* Ваш сочный неоново-желтый цвет */
+            height: 100vh;
+            height: 100dvh; /* Поддержка корректной высоты на смартфонах */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            font-family: 'Montserrat', sans-serif;
+            color: #000000;
+            padding: 40px 24px;
+            overflow: hidden;
+        }
+
+        .main-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            max-width: 72px;
+            transition: max-width 0.3s ease;
+        }
+
+        .logo-image {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        .footer {
+            width: 100%;
+            max-width: 1400px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 14px;
+            font-weight: 400;
+            letter-spacing: -0.2px;
+        }
+
+        .footer-item {
+            flex: 1;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .footer-item:first-child {
+            text-align: left;
+        }
+
+        .footer-item:last-child {
+            text-align: right;
+        }
+
+        .footer a {
+            color: #000000;
+            text-decoration: none;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer a:hover {
+            opacity: 0.6;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 30px 20px;
+                overflow: auto; 
+            }
+
+            .logo-container {
+                max-width: 55px;
+            }
+
+            .footer {
+                flex-direction: column;
+                gap: 16px;
+                margin-top: 40px;
+            }
+
+            .footer-item, 
+            .footer-item:first-child, 
+            .footer-item:last-child {
+                text-align: center;
+                width: 100%;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .logo-container {
+                max-width: 55px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <div class="logo-container">
+            <img src="logo.png.png" alt="FORK Logo" class="logo-image">
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-item">
+            Instagram: <a href="https://instagram.com/forkproduction" target="_blank" rel="noopener noreferrer">forkproduction</a>
+        </div>
+        <div class="footer-item">
+            <a href="tel:+79853695107">+7 985 369-51-07</a>
+        </div>
+        <div class="footer-item">
+            E-mail: <a href="mailto:work@forproduction.ru">work@forproduction.ru</a>
+        </div>
+    </footer>
+
+</body>
+</html>
